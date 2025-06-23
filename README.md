@@ -8,7 +8,7 @@ An Android app that helps you manage your recipes and plan meals. You can add re
 
 <img src="Screenshot 2025-06-23 204340.png" alt="Recipe List" width="300">
 
-### Recipe Detail Screen
+### Add Recipe Screen
 
 <img src="screenshots/recipe_detail.png" alt="Recipe Detail" width="300">
 
