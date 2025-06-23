@@ -10,11 +10,11 @@ An Android app that helps you manage your recipes and plan meals. You can add re
 
 ### Add Recipe Screen
 
-<img src="screenshots/recipe_detail.png" alt="Recipe Detail" width="300">
+<img src="Screenshot 2025-06-23 204410.png" alt="Recipe Detail" width="300">
 
 ### Meal Plan Screen
 
-<img src="screenshots/meal_plan.png" alt="Meal Plan" width="300">
+<img src="Screenshot 2025-06-23 204355.png" alt="Meal Plan" width="300">
 
 ## Features
 
