@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recipesFragment">
+
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.example.recipemanager.ui.recipes.RecipeDetailFragment"
+        android:label="Recipe Details">
+        <argument
+            android:name="recipeId"
+            app:argType="integer" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_recipes_to_recipeDetail"
+        app:destination="@id/recipeDetailFragment" />
+
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.example.recipemanager.ui.recipes.RecipesFragment"
+        android:label="Recipes">
+        <action
+            android:id="@+id/action_recipes_to_add_recipe"
+            app:destination="@id/addRecipeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addRecipeFragment"
+        android:name="com.example.recipemanager.ui.recipes.AddRecipeFragment"
+        android:label="Add Recipe" />
+
+    <fragment
+        android:id="@+id/mealPlanFragment"
+        android:name="com.example.recipemanager.ui.mealplan.MealPlanFragment"
+        android:label="Meal Plan" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.recipemanager.ui.profile.ProfileFragment"
+        android:label="Profile" />
+
+</navigation>
