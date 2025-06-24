@@ -10,8 +10,8 @@ import androidx.navigation.fragment.navArgs
 import com.example.recipemanager.data.database.RecipeDatabase
 import com.example.recipemanager.data.repository.RecipeRepository
 import com.example.recipemanager.databinding.FragmentRecipeDetailBinding
-import com.example.recipemanager.ui.viewmodel.RecipeViewModel // ✅ Added this
-import com.example.recipemanager.ui.viewmodel.RecipeViewModelFactory // ✅ Added this
+import com.example.recipemanager.ui.viewmodel.RecipeViewModel 
+import com.example.recipemanager.ui.viewmodel.RecipeViewModelFactory 
 
 class RecipeDetailFragment : Fragment() {
 
