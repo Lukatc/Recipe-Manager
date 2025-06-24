@@ -23,13 +23,11 @@ An Android app that helps you manage your recipes and plan meals. You can add re
 * **Favorites**: Mark recipes as favorite for quick access
 * **Meal Planning**: Add recipes to your meal plan
 * **Offline Storage**: All data saved locally using Room database
-* **User Accounts**: Supports user login with Firebase Authentication
 
 ## 🛠 Tech Stack
 
 * **Kotlin** - Programming language
 * **Room Database** - Local data storage
-* **Firebase Authentication** - User management
 * **RecyclerView** - Efficient list displays
 * **Material Design Components** - UI elements and navigation
 
@@ -42,8 +40,8 @@ An Android app that helps you manage your recipes and plan meals. You can add re
 
 ## 📄 Terms of Use
 
-* This app stores data locally and uses Firebase Auth for user accounts.
-* User data is private and stored only on your device and Firebase.
+* This app stores data locally .
+* User data is private and stored only on your device.
 
 ## How the App Works
 
@@ -71,10 +69,6 @@ An Android app that helps you manage your recipes and plan meals. You can add re
 **Room Database**
 
 * Manages storage of recipes, ingredients, and meal plans
-
-**Firebase Authentication**
-
-* Handles user login and registration
 
 ## File Organization
 
