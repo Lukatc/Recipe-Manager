@@ -1,8 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/recipesFragment">
+    app:startDestination="@id/loginFragment">
+
+    <!-- AUTH FLOW -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.recipemanager.ui.auth.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_login_to_recipes"
+            app:destination="@id/recipesFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.recipemanager.ui.auth.RegisterFragment"
+        android:label="Register">
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/loginFragment"
+
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_register_to_recipes"
+            app:destination="@id/recipesFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <!-- MAIN APP FLOW -->
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.example.recipemanager.ui.recipes.RecipesFragment"
+        android:label="Recipes">
+        <action
+            android:id="@+id/action_recipes_to_recipeDetail"
+            app:destination="@id/recipeDetailFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_recipes_to_add_recipe"
+            app:destination="@id/addRecipeFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 
     <fragment
         android:id="@+id/recipeDetailFragment"
@@ -11,19 +84,6 @@
         <argument
             android:name="recipeId"
             app:argType="integer" />
-    </fragment>
-
-    <action
-        android:id="@+id/action_recipes_to_recipeDetail"
-        app:destination="@id/recipeDetailFragment" />
-
-    <fragment
-        android:id="@+id/recipesFragment"
-        android:name="com.example.recipemanager.ui.recipes.RecipesFragment"
-        android:label="Recipes">
-        <action
-            android:id="@+id/action_recipes_to_add_recipe"
-            app:destination="@id/addRecipeFragment" />
     </fragment>
 
     <fragment
