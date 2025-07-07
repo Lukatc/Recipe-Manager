@@ -1,31 +1,35 @@
 package com.example.recipemanager.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.recipemanager.R
 import com.example.recipemanager.databinding.FragmentProfileBinding
+import com.example.recipemanager.ui.auth.LoginActivity
+import com.google.firebase.auth.FirebaseAuth
 
-class ProfileFragment : Fragment() {
-
+class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    private lateinit var auth: FirebaseAuth
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        _binding = FragmentProfileBinding.bind(view)
 
-        binding.textProfileTitle.text = "Welcome to your profile!"
-        // Later: binding.imageProfile.setImageURI(uri) or similar
+        auth = FirebaseAuth.getInstance()
+        val user = auth.currentUser
+
+        binding.textProfileTitle.text = "Hello, ${user?.email}"
+        binding.tvEmail.text = user?.email
+
+        binding.btnLogout.setOnClickListener {
+            auth.signOut()
+            val intent = Intent(requireActivity(), LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
     }
 
     override fun onDestroyView() {
@@ -33,4 +37,3 @@ class ProfileFragment : Fragment() {
         _binding = null
     }
 }
-
