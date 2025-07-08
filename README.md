@@ -24,9 +24,6 @@ An Android single-Activity app for securely managing your personal recipes, ingr
   • Add, edit and delete recipes with title, category, difficulty, servings and ingredient list  
   • Full-screen detail view showing all ingredients and instructions  
   • Mark recipes as "favorites" for quick access  
-* **Search & Filter**  
-  • Search recipes by title  
-  • Filter by category or show only favorites  
 * **Meal Planning**  
   • Build a daily meal plan by selecting from your saved recipes  
   • View & remove planned meals in a dedicated fragment  
