@@ -46,16 +46,6 @@ An Android single-Activity app for securely managing your personal recipes, ingr
 * **Material Components** for UI  
 * **RecyclerView** for efficient lists  
 
-## 🚀 Why This App Feels Fast
-
-- **Room Database + Kotlin Coroutines**  
-  All database operations (queries, inserts, updates) run off the main thread with Flow/LiveData, so UI remains snappy.
-- **RecyclerView with ViewBinding**  
-  Efficient view recycling and binding keeps list scrolling smooth, even with many recipes.
-- **Lightweight Animations**  
-  Simple translate animations defined in XML (no heavy property animations) ensure transitions never block rendering.
-- **WorkManager for Background Tasks**  
-  Meal-plan reminders run independently of your UI thread, so scheduling or notification logic never interferes with user interactions.
 
 ---
 
